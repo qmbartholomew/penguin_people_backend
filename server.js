@@ -42,7 +42,6 @@ app.get('/', (req, res) => {
 // People index route
 app.get('/people', async (req, res) => {
     try {
-        // Send all people
         res.json(await People.find({}))
     } catch(error) {
         res.status(400).json({error})
